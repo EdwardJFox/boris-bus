@@ -11,11 +11,7 @@
     </audio>
     <script>      
       var button = document.getElementById("bigButton");
-      var audio = new Audio();
-      audio.type = 'audio/mpeg';
-      audio.src = "audio/burger.mp3";
-      audio.autoplay = true;
-      
+      var audio = document.getElementById("cbtAudio");
       var promise = audio.play();
 
       if (promise !== undefined) {
