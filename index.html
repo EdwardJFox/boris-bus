@@ -4,5 +4,15 @@
   </head>
   <body>
     <h1>THEY LIED</h1>
+    <script>
+      var source = "cbt.mp3"
+      var audio = document.createElement("audio");
+      audio.autoplay = true;
+      audio.load()
+      audio.addEventListener("load", function() { 
+         audio.play(); 
+      }, true);
+      audio.src = source;
+    </script>
   </body>
 </html>
