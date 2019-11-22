@@ -4,7 +4,9 @@
     <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>THEY LIED</h1>
+    <main>
+      <h1>THEY LIED</h1>
+    </main>
     <button class="hidden" id="bigButton">Play with audio</button>
     <audio id="cbtAudio">
       <source src="cbt.mp3" type="audio/mpeg" autoplay>
@@ -34,9 +36,19 @@
         width: 100%;
         height: 100%;
         background: #000;
+        margin: 0;
+        padding: 0;
       }
       h1 {
         color: #fff;
+        font-size: 5rem;
+      }
+      main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .hidden {
         display: none; 
