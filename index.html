@@ -15,7 +15,12 @@
 //       audio.autoplay = true;
       
       var button = document.getElementById("bigButton");
-      var audio = document.getElementById('cbtAudio');
+      var source = "audio/burger.mp3"
+      var audio = new Audio();
+      // no event listener needed here
+      audio.src = source;
+      audio.autoplay = true;
+      
       var promise = audio.play();
 
       if (promise !== undefined) {
