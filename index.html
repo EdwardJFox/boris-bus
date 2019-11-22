@@ -6,7 +6,9 @@
   <body>
     <h1>THEY LIED</h1>
     <button class="hidden" id="bigButton">Play with audio</button>
-    <source id="cbtAudio" src="cbt.mp3" type="audio/mpeg" autoplay>
+    <audio>
+      <source id="cbtAudio" src="cbt.mp3" type="audio/mpeg" autoplay>
+    </audio>
     <script>      
       var button = document.getElementById("bigButton");
       var audio = new Audio();
