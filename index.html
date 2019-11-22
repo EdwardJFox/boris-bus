@@ -15,11 +15,16 @@
 //       audio.autoplay = true;
       
       var button = document.getElementById("bigButton");
-      var promise = document.getElementById('cbtAudio').play();
+      var audio = document.getElementById('cbtAudio');
+      var promise = audio.play();
 
       if (promise !== undefined) {
           promise.catch(error => {
             button.classList.remove("hidden");
+            
+            button.addEventListener("click", function(e){
+               audio.play();
+            }); 
           }).then(() => {
               // Auto-play started
           });
@@ -29,9 +34,9 @@
       * {
         font-family: 'Alata', sans-serif; 
       }
-      body {
-        width: 100vw;
-        height: 100vh;
+      body, html {
+        width: 100%;
+        height: 100%;
         background: #000;
       }
       h1 {
@@ -49,6 +54,7 @@
         position: absolute;
         bottom: 1rem;
         right: 1rem;
+        border: none;
       }
     </style>
   </body>
