@@ -1,15 +1,55 @@
 <html>
   <head>
     <title>THEY LIED</title>
+    <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1>THEY LIED</h1>
+    <button class="hidden" id="bigButton">Play with audio</button>
+    <source id="cbtAudio" src="cbt.mp3" type="audio/mpeg" autoplay>
     <script>
-      var source = "cbt.mp3"
-      var audio = new Audio();
-      // no event listener needed here
-      audio.src = source;
-      audio.autoplay = true;
+//       var source = "cbt.mp3"
+//       var audio = new Audio();
+//       // no event listener needed here
+//       audio.src = source;
+//       audio.autoplay = true;
+      
+      var button = document.getElementById("bigButton");
+      var promise = document.getElementById('cbtAudio').play();
+
+      if (promise !== undefined) {
+          promise.catch(error => {
+            button.classList.remove("hidden");
+          }).then(() => {
+              // Auto-play started
+          });
+      }
     </script>
+    <style>
+      * {
+        font-family: 'Alata', sans-serif; 
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+      }
+      h1 {
+        color: #fff;
+      }
+      .hidden {
+        display: none; 
+      }
+      button {
+        font-size: 2rem;
+        background: #496945;
+        color: #fff;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.2rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+      }
+    </style>
   </body>
 </html>
