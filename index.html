@@ -6,13 +6,10 @@
     <h1>THEY LIED</h1>
     <script>
       var source = "cbt.mp3"
-      var audio = document.createElement("audio");
-      audio.autoplay = true;
-      audio.load()
-      audio.addEventListener("load", function() { 
-         audio.play(); 
-      }, true);
+      var audio = new Audio();
+      // no event listener needed here
       audio.src = source;
+      audio.autoplay = true;
     </script>
   </body>
 </html>
