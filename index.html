@@ -6,8 +6,12 @@
   <body>
     <main>
       <h1>THEY LIED</h1>
+      <button class="hidden" id="bigButton">Play with audio</button>
     </main>
-    <button class="hidden" id="bigButton">Play with audio</button>
+    <footer>
+      <a href="https://twitter.com/icemaz">@icemaz</a>, image from <a href="https://commons.wikimedia.org/wiki/File:Informal_meeting_of_ministers_for_foreign_affairs_(Gymnich)._Arrivals_Boris_Johnson_(36928363842).jpg">Wikimedia Commons</a>
+      <p>If you have a royalty free image of the Leave.eu bus, please get in touch.</p>
+    </footer>
     <audio id="cbtAudio">
       <source src="cbt.mp3" type="audio/mpeg" autoplay>
     </audio>
@@ -39,9 +43,15 @@
         margin: 0;
         padding: 0;
       }
+      body {
+        background-image: url('./boris.jpg');
+        background-position: center center;
+        background-size: cover;
+      }
       h1 {
         color: #fff;
-        font-size: 5rem;
+        font-size: 6rem;
+        text-align: center;
       }
       main {
         width: 100%;
@@ -49,6 +59,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      footer {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        color: #fff;
+      }
+      footer a {
+        color: #fff;
       }
       .hidden {
         display: none; 
@@ -64,6 +83,16 @@
         right: 1rem;
         border: none;
         cursor: pointer;
+      }
+      @media only screen
+      and (max-device-width: 780px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait) {
+        button {
+          width: 70%;
+          left: 15%;
+          bottom: 8rem;
+        }
       }
     </style>
   </body>
